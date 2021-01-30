@@ -10,6 +10,6 @@
 - Open link in Discord
 - Open link in incognito tab (Chrome, Microsoft Edge, Mozilla Firefox)
 
-#BetterDiscordAddons - Themes
+# BetterDiscordAddons - Themes
 
 ### Coming soon...
