@@ -2,22 +2,22 @@
  * @name CDCStuff
  * @author ! !Cássio Maciel#6368
  * @description hm
- * @version 1.1.0
+ * @version 1.1.1
  * @authorId 316465442275196930
  * @authorLink https://twitter.com/MrCassioMaciel
  */
 
-//CPL eyJ2ZXJzaW9uIjoiMS4xLjAifQ==
+//CPL eyJ2ZXJzaW9uIjoiMS4xLjEifQ==
 
 module.exports = class CDCStuff {
     getPluginInfo() {
-        return "eyJ2ZXJzaW9uIjoiMS4xLjAifQ==";
+        return "eyJ2ZXJzaW9uIjoiMS4xLjEifQ==";
     }
     getPluginName() {
         return "CDCStuff";
     }
     getPluginVersion() {
-        return "1.1.0";
+        return "1.1.1";
     }
     settings = {
         checkPluginUpdate: !!BdApi.getData(this.getPluginName(), "checkPluginUpdate"),
