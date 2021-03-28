@@ -2,22 +2,22 @@
  * @name CDCStuff
  * @author ! !Cássio Maciel#6368
  * @description hm
- * @version 1.3.0
+ * @version 1.4.1
  * @authorId 316465442275196930
  * @authorLink https://twitter.com/MrCassioMaciel
  */
 
-//CPL eyJ2ZXJzaW9uIjoiMS4zLjAifQ==
+//CPL eyJ2ZXJzaW9uIjoiMS40LjEifQ==
 
 module.exports = class CDCStuff {
     getPluginInfo() {
-        return "eyJ2ZXJzaW9uIjoiMS4zLjAifQ==";
+        return "eyJ2ZXJzaW9uIjoiMS40LjEifQ==";
     }
     getPluginName() {
         return "CDCStuff";
     }
     getPluginVersion() {
-        return "1.3.0";
+        return "1.4.1";
     }
     settings = {
         checkPluginUpdate: !!BdApi.getData(this.getPluginName(), "checkPluginUpdate"),
@@ -74,13 +74,14 @@ module.exports = class CDCStuff {
         require("request").get("https://raw.githubusercontent.com/cassiomaciell/BetterDiscordAddons/main/Emotes.json", async (error, response, body) => {
             if (!error) {
                 const emotes = JSON.parse(body);
-                Object.keys(emotes).forEach(key=>{
-                    BdApi.emotes[key] = emotes[key]
-                })
+                Object.keys(emotes).forEach((key) => {
+                    BdApi.emotes[key] = emotes[key];
+                });
             } else {
                 // error msg
             }
         });
+        window.CDCStuffCheckUpdate = checkPluginUpdate;
     }
     stop() {
         document.removeEventListener("click", this.events.onClick);
